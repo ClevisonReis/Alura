@@ -1,0 +1,44 @@
+Linux - Ubuntu
+
+Terminal do linux
+Comandos
+pwd (Lsita o diretório em que esta conectado no momento)
+ls  (lsita os arquivos do diretório)
+cd /nomeDiretorio (Muda o diretório no linux)  
+cd nomePasta (Navega entre as pastas)
+cd .. (Retorna para a pasta anterior)
+cat nomeArquivo.txt (Le o conteudo do arquivo)
+ls -l (Mosta algumas informações sobre os arquivos e deretório de forma detalhada)
+ls -a (Lista os arquivos e diretorios, incluindo arquivos ocultos)
+whoami (Mostra o nome do usuário no linux)
+echo "Mensagem" (Retorna a mensagem passada como parametro)
+echo "mensagem" > nomeArquivo.txt (Escreve a mensagem passada como parâmetro, no arquivo)
+echo "novaMensagem" >> nomeArquivo.txt (Adiciona a mensagem passada como parâmetro, no arquivo)
+clear (Limpa a tela do terminal) Ou utiliza o atalho -> ctrl + l
+mkdir nomeDiretorio (Cria um diretório)
+rmdir nomeDiretorio (Exclui um diretorio) Exclui apenas diretório que estão vazio.
+rm nomeDiretorio (Exclui um arquivo)
+cat *.txt (Le o conteudo de todos arquivos .txt)
+cat arquivo?.txt (Le o conteudo de todos arquivos, arquivo.txt, que possui um caracter apos seu nome)
+rm -r workspace (Remove recursivo. Entra no diretório e sai excluindo tudo- Apaga todo o diretório workspace)
+cp arquivoOrigem.txt arquivoDestino.txt (Copia o conteúdo de um arquivo para outro arquivo)
+mv arquivoOrigem.txt arquivoDestino.txt (move(renomeia) o arquivo para outro arquivo)
+mv arquivoOrigem.txt nomeDiretorio (move o arquivo para um diretório, mantendo o mesmo nome)
+mv arquivoOrigem.txt nomeDiretorio/novoNome.txt (move o arquivo para um diretório, alterando o nome do arquivo)
+cp -r nomediretorioOrigem nomediretorioDestino (Copia o diretório para putra pasta)
+zip -rzip work.zip workspace/ (Compactando um diretório)
+unzip work.zip (Descompactando um diretório)
+unzip -q work.zip (Descompactando um diretório)
+unzip -l work.zip listar os arquivos dentro do arquivo .zip
+tar -cz nomeArquivo > work.tar.gz (Cria e compacta o arquivo) cz de create zip
+tar -xz < work.tar.gz (Descompacta o arquivo) xtreact zip
+tar -czf work.tar.gz nomeArquivo/ (Cria e compacta o arquivo, para um arquivo)
+tar -xzf work.tar.gz (indicar que iremos extrair os arquivos.)
+date "+%d de %B de %Y" (Exibe a data do dia. dia, mes extenso, ano)
+touch nomeArquivo muda a data de alteração do arquivo.
+head nomeArquivo (Lê o conteúdo de um arquivo)
+head -n 3 nomeArquivo (Lê as primerias 3 linhas do arquivo)
+tail nomeArquivo (Retorna as ultimas linhas do arquivo)
+tail -n 3 nomeArquivo (Lê as ultimas linhas do arquivo)
+vi nomeArquivo(i inclui antes, a adiciona após, A adiciona no fim da linha, x remove 1 caracter, dd remove 1 linha, 11x remove 11 caracteres, 5dd remove 5 linhas)(:w para salvar, :q para sair, :wq para salvar e sair) yy (copia uma linha no arquivo. p cola a linha. 3yy copia 3 linhas)
+

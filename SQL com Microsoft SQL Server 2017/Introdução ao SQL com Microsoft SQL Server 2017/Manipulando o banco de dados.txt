@@ -1,0 +1,20 @@
+Entidades do SQL Server
+
+Um servidor de BD pode ter diversos bancos de dados
+E cada banco de dados pode possuir diversas tabelas.
+
+Entidades do banco de dados
+-Tabelas
+Chave primária
+Chave Estrangeira
+
+-View é uma estrutura lógica dentro de um banco de dados. Ela não existe fisicamente, ela na verdade é uma consulta a outras tabelas.
+
+-Procedures, são processos que irão processar alguma coisa dentro do BD. Ex, fazer manipulação de dados, pegar algo de uma tabela e colocar em outra. Pode ser função.
+
+-Trigger, é um conjunto de comandos, que pode ser procedures ou funções. Ou simplesmente um comando unico de manipulação de dados, que pode ser execuado quando algo aconteçer com uma tabela. ex.: um registro novo for inserido na tabela, dai dispara uma trigger.
+
+
+--------------Management studio
+Interfaçe entre os nossos comandos e o banco de dados sql server
+

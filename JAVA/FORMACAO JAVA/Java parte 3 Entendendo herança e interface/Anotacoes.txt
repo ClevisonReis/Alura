@@ -1,0 +1,13 @@
+//Classe abstrato não pode instanciar, criar objetos dessa classe. Por que é abstrato
+//Não pode da new
+
+//Abstrato, não é possível instanciar objetos da classe conta
+
+//Metodo abstratro significa que ele não tem corpo não há implementação
+//É implementado através dos filhos
+//Não tem implementação
+
+-------
+Interface é uma classe abstrata com todos os metodos abstratos
+Em uma interface não pode ter nada concreto
+

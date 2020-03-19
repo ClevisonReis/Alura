@@ -1,0 +1,9 @@
+O Arquivio com extensão .mdf é a extensão do arquivo do banco de dados do sql server.
+.mdf = para dados
+.ldf = Para log
+
+
+Todo nome de entidade dentro do sql é representado via [colchetes]
+
+
+Tipo de dados para ciração de tabelas.

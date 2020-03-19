@@ -1,0 +1,4 @@
+- As caracteristicas de uma classe são os atributos.
+- Uma classe é uma especificação de um tipo, definindo atributos e comportamentos.
+- Um objeto é uma instância de uma classe onde podemos definir valores para seus atributos.
+- Para criar uma instância precisamos usar a palavra chave new

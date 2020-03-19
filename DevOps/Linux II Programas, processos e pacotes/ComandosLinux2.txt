@@ -1,0 +1,72 @@
+Descobrir quais são os processos que estão sendo executados em nossa máquina e como finalizar tais processos;
+Executar programas no background ou no foreground;
+Configurar programas para ter permissão de execução;
+Procurar arquivos no Sistema Operacional;
+Gerenciar novos usuários;
+Configurar as permissões de acesso aos arquivos;
+Configurar variáveis de ambiente;
+Instalar novos programas do zero;
+Inicializar e parar serviços que rodam junto com o início da máquina;
+Compilar e instalar um programa do zero a partir de seu código fonte;
+Fazer o acesso remoto às máquinas que rodam Linux;
+
+
+ps (Verifica os processos que estão sendo executados no terminal)
+ps -e (Verifica todos os processos que estão sendo executados no sistema)
+kill numProcesso (Mata o processo que está sendo executado "Pede pro processo parar")
+kill -9 numProcesso (Mata o processo sem da chances)
+ps -ef (Mostra mais informações sobre o processo)
+ps -ef | grep nomeProcesso (redireciona o processo para um outro programa, filtra as informações somente do processo listado)
+$ cat google.txt | grep "November" (imprimir, no terminal, as linhas que contêm o termo)
+top (Mostra a situação dos processo, memoria etc... de cada processo)
+killall top (mata todos os processos que foram executados de um mesmo programa)
+top -u nomeUser (mostrar apenas os processos de um determinado usuário)
+firefox (Inicia o programa firefox pelo terminal)
+bg numHierarquiaProcesso (joga o processo para rodar em background)
+fg numHierarquiaProcesso (tras o processo de volta para o foreground)
+pstree (comando que nos mostra a árvore de processos)
+===
+Se utilizarmos o comando Ctrl + z conseguimos que o terminal fique livre para o uso, porém paramos o programa e não conseguiremos utilizá-lo. Pra que o programa volte a ser excutado em background utilizamos o comando bg
+===
+jobs (Para saber quais processos estão sendo executados em background e quais processos estão parados no nosso terminal)
+chmod +(r leitura, ou wescrita, ou x execucao) Aciciona acesso ao arquivo de um diretório. 
+sh nomeArquivo (Executa um arquivo no diretório atual)
+./nomeArquivo (Executa um arquivo no diretório atual)
+ls -l nomeArquivo (lista as permissões)
+locate (faz uma busca nos arquivos do computador)
+locate firefox (faz uma busca nos arquivos do computador oude encontra o programa)
+which firefox (procura qual é o arquivo que irá executar se executar esse comando)
+su nomeUsuario (logar com outro usuário do sistema)
+which zip (Para descobrir o caminho onde se encontra o arquivo de um comando, utilizamos o comando which)
+mv realizabackup /usr/bin (move o arquivo realizabackup para o diretório /usr/bin)
+sudo passwd (Para alterar a senha do usuário atual, utilizamos o comando passwd. Para alterar a senha do usuário root, utilizamos $ sudo passwd)
+sudo passwd
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+adduser nomeUsuario (Adiciona um usuário ao sistema)
+whoami (Vê o usuário que esta locado)
+chmod o-rx (Remove as permissões dos outros usuário no diretório do usuario locado)
+sudo adduser nomeUser (Adicionar um usuário, quando não estou logado com o usuário root)
+chmod g+w nico/ (adicionar permissão de escrita para o grupo ao qual pertence o diretório nico)
+env (lista todas as variáveis de ambiente que o seu sistema possui)
+sudo apt-get update (lista das versões atualizadas dos programas)
+apt-cache search ftp (Buscar um programa de servidor ftp)
+sudo apt-get install vsftpd (Instalar um programa)
+sudo apt-get remove vsftpd (Remover um programa)
+sudo apt-get update (Antes de instalar um programa, é recomendado atualizar a lista de pacotes disponíveis para instalação, para garantir que iremos instalar o pacote mais atual que está disponível nos repositórios - A opção upgrade do apt-get, serve para atualizar todo o nosso sistema, atualizando as versões dos pacotes que já estão instalados. ) 
+apt-cache search mysql-server (Para descobrir quais pacotes estão disponíveis para instalação a partir de um termo de busca, utilizamos o comando $ apt-cache search)
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb (Para instalar um pacote do tipo .deb, utilizamos o comando dpkg e passamos a opção -i, de install:)
+sudo apt-get -f install
+sudo dpkg -r google-chrome-stable (Se utilizarmos o comando dpkg, basta passar a opção -r, para remover o pacote instalado:)
+tar zxf git-2.7.1.tar.gz (Descompactar um arquivo tar.gz)
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+--------JOIN
+
+Primeiro lugar, para eu fazer um JOIN, eu preciso ter uma chave única que esteja nas duas ou mais tabelas que eu quero juntar.
+ Esses campos que eu vou ligar, eles não precisam ter o mesmo nome, mas eles devem ser do mesmo tipo. Eles não podem ser de tipos diferentes, se forem de tipos diferentes, eu tenho que usar uma função de conversão para converter para o mesmo tipo do campo do outro lado.
+E, também, não é preciso ter uma chave estrangeira ligando esses dois comandos, desculpe, esses dois campos. Eu posso ligar dois campos de duas tabelas diferentes sem que haja uma chave estrangeira.
+
+Então, quando eu passo ON o campo da direita igual da esquerda, eu digo para o SELECT qual é o critério que vai juntar as duas tabelas. E como eu estou usando INNER JOIN, eu vou buscar todo mundo que é comum.

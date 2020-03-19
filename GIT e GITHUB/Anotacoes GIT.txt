@@ -1,0 +1,156 @@
+git init
+(Inicia um repositório a partir de um diretório)
+
+git status
+( Mostra o status da árvore de trabalho, etc...)
+HEAD: Estado atual do nosso código, ou seja, onde o Git nos colocou
+Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
+index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.
+
+git add nmArquivo
+(Adciona o arquivo a lista de monitoramento do git)
+
+git add .
+(Passa a monitorar todos os arquivos do diretório atual)
+
+git commit -m
+(Comita os arquivos, passando uma mensagem do que foi feito)
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
+
+git log
+(Ver o histórico de alteraçãoes que já foi executada no projeto)
+git 
+git config
+(Modifica ou visualizar alteraçãos para cada projeto, utiliznado o parametro --local, ou para todo o computador --global)
+
+git config --local user.name "clevison"
+(Alterando o nome do usuário configurado no git)
+
+git log --oneline
+(Mosta cada comite em uma única linha de forma resumida)
+
+git log -p
+(Mosta cada comite com todas as alterações que foram realizadas)
+
+---Criando um servidor para armazenar as alterações
+mkdir nmDiretorio
+(Criando uma pasta)
+cd nmDiretorio
+(Entrando no diretorio criado)
+git init --bare
+(O parametro bare, indica que o repositório é puro, só contem as alterações dos arquivos, não contem cópia dos arquivos fisico)
+
+--- Criando um repositório remoto
+git remote add nnRepositorio C:\Users\Clevison\servidorGit
+( Adicionando o repositório remoto para o diretorio do git enviar as alterações )
+git remote
+
+git remote -v
+(Mostra onde está indo buscar e onde está indo publicar)
+
+---Crinado uma pasta para outro usuário
+mkdir ana
+(Cria uma pasata chamada ana)
+
+git clone /c/users/ nmRepositorio
+(Clona o endereço do servidor remoto, mais a pasta que está queerendo clonar)
+(git clone traz um repositório remoto para o nosso computador, criando um repositório local.)
+
+---Enviando os dados do para o servidor
+git push servidorGit master
+(Envia para o repositório chamado servidorGit, o branch master, envia todos dados códigos para o diretório remoto )
+(envia as alterações para o repositório remoto)
+
+git pull nmRepositorio master
+(Pegando os dados de um repositorio local para a branch master)
+
+git remote add origin git@github.com:CViniviusSDias/alura-git.git
+
+-----------------------------------
+branch
+
+git branch
+(Ver em qual branch esta atualmente)
+
+git branch nome-da-branch
+(Criando uma branch local)
+
+git branch -d nome-da-branch
+(Removendo uma branch local)
+
+git checkout nome-da-branch
+(Muda para a branch especificada)
+
+git checkout -b nome-da-branch
+(Cria uma branch e já muda para ela)
+
+-------------------------
+Unindo as branchs
+git merge nome-da-branch
+(Trás o conteúdo da branch listada para a branch atual)
+(Ao executar ele cria um commit de merge, para confirmar o merge clique :x "+" Enter)
+- Fazendo isso os commits efetuados na branch levada para a vranch master não são enviados. Constará apenas que foi efetuado um merge
+
+---------------------
+Unindo as branchs com os logs
+
+git rebase nome-da-branch
+(Pega os commit da branch especificada e atualizar a branch master)
+
+git pull local master
+(Sempre antes de começar a trabalhar, precisa verificar se não tem nenhuma alteração no repositório remoto)
+
+-----------------
+git log --graph
+(para ver as linhas de desenvolvimento (branches);
+
+--------------Ctrl + Z no GIT----------------
+git checkout -- no-do-arquivo
+(Desfaz uma alteração para incluir no git) - Antes de executar o git add
+
+git reset HEAD no-do-arquivo
+(Desfazer uma alteração que já foi marcada para comitar) - Após fazer o git add
+(stagio HEAD "voltar o estado para o meu local de trabalho, estado em que eu ainda estou trabalhando")
+
+git revert 00000000000000000000000000000000000000000
+(Utilizando o código hash gerado pelo commit, é possível reverter o commit, cria um novo commit desfazendo as alteração que o commit fez)
+
+-------deixar uma alteração para depois
+Quando precisamos parar o desenvolvimento de algo no meio para trabalhar em outra coisa
+
+git stash
+(Deixa em stand by as alterações realizadas sem deixa-las disponíveis para adicionar)
+
+git stash list
+(Mostra a lista de alteraçãoes que estão em stash)
+
+
+Pegar os dados que foram salvos na stash e trazer para o local de trabalho.
+git stash apply num_da_stash
+(Aplica as modificações) Só que as modificações ficam na stash, para demover tem que executar o comando drop.
+
+git stash drop
+(remove a stash)
+
+git stash pop
+(Pega os dados da stash e ja remove da lista de stash) (Faz as duas coisas anteriores ao mesmo tempo)
+
+git diff num_hash .. num_hash
+(Mostra a diferença entre os commit)
+
+--------------
+Gerando uma versão, marca uma versão inicial
+git tag -a v0.1.0
+
+git tag -a v0.1.0 -m "Lançando a primeira mensagem (BETA) da aplicação"
+
+git tag
+(Mostra as tags que existem)
+
+
+

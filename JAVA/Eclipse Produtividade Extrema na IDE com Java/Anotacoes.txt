@@ -1,0 +1,40 @@
+Ctrl + M
+Maximiza o eclipse
+
+ctrl + espaço
+Auto completa os comandos
+
+Alt + Shift + A
+Seleção em bloco
+Digitar em várias linhas
+
+Existe um item do menu para gerar os getters e setters chamado generate getters and setters. Para acessá-lo rapidamente basta fazer ctrl + 3 e começar a digitar qualquer parte do nome desse menu ou as suas iniciais. Por exemplo, você pode fazer ctrl + 3 getter (ou as iniciais ggas) e ele trará o menu correto. Alternativamente você pode utilizar Alt + Shift + S e depois R para abrir o gerador de get/set, Alt + Shift + S e depois S para gerar o toString com os atributos da classe, Alt + Shift + S e depois E para gerar o equals e o hashcode.
+
+ctrl + shift + F
+Formatar e identar o código automaticamente
+
+alt + shift + R
+Renomear consistentimente classes e variaveis.
+
+
+alt + (seta para cima ou baixo)
+Move uma ou várias linhas selecionadas.
+
+ctrl + shift + O, chamado Organize Imports
+que além de importar os tipos faltantes, remove os imports não usados e os organiza de acordo com os pacotes.
+
+ctrl + shift + R
+Pesquisar nos projetos abertos
+O atalho mais geral é o ctrl + shift + R que serve para abrir Resources, ou seja, qualquer arquivo de qualquer projeto aberto.
+Na janela que abriu, podemos começar a digitar o nome do arquivo, por exemplo web, e todos os arquivos cujo nome contenha o que você digitou aparecerão na lista. Basta selecionar o arquivo que você estava procurando e dar enter.
+
+Se você não tem certeza do nome completo do arquivo, ainda pode usar * e ? para aceitar qualquer String e qualquer caractere, respectivamente. Por exemplo, para achar alguma página JSP poderíamos digitar *.jsp.
+
+ctrl + shift + T
+Pesquisar classes
+Quando estiver procurando uma classe, o Eclipse tem uma busca específica otimizada. O atalho para essa busca é o ctrl + shift + T, para abrir Types. Na tela que aparece valem as mesmas regras da busca anterior, com a vantagem de já sabermos se o tipo é, por exemplo, uma classe, interface ou enum, e de buscar classes das bibliotecas que você usa, mesmo que seja uma classe privada ou interna.
+
+Além do ctrl + T, existem dois outros atalhos para vermos a hierarquia de uma classe. Esses dois atalhos são o F4 em cima da classe e o ctrl + alt + H.
+
+
+

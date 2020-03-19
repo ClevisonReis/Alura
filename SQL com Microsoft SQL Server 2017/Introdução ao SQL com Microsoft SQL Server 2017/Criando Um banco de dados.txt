@@ -1,0 +1,71 @@
+CREATE DATABASE SUCOS_VENDAS_01
+
+CREATE DATABASE SALES_VENDAS_02
+ON ( NAME = SUCO_VENDAS_DAT,  
+    FILENAME = 'C:\TEMP\DATA\SALES_VENDAS_02.mdf',  --O arquivo que representa os dados serão criados nesse diretório
+    SIZE = 10,  --O tamanho inicial será 10 megabyte
+    MAXSIZE = 50,  --Terá o tamanho máximo de 50 megabyte
+    FILEGROWTH = 5 )  --Crescerá de 5 em 5 megabyte
+LOG ON  
+( NAME = SUCOS_VENDAS_LOG,  
+    FILENAME = 'C:\TEMP\DATA\SALES_VENDAS_02.ldf',  
+    SIZE = 5MB,  
+    MAXSIZE = 25MB,  
+    FILEGROWTH = 5MB )
+
+
+---------------------- Tipo de dados para ciração de tabelas.
+
+- Bigint, como o próprio nome em inglês diz, é um inteiro grande, ou seja, é um número que não tem casa decimal e possui um limite, inferior e superior, que está sendo mostrado aqui em cima. Ele vai de -2^63 a +2^63-1
+
+- Numeric, é um número com casas decimais, porém, com casas decimais fixas. Se eu digo que um Numeric tem cinco decimais e se eu representar, por exemplo o número 1 dentro do banco de dados, ele vai ser representado com 1,00000, ou seja, cinco casas decimais. Independente do número ser inteiro ou possuir casas decimais realmente.
+
+- Bit, é um inteiro que me dá o valor 1 ou 0. Ele é usado normalmente para definir campos lógicos. Normalmente utilizamos o 1 como verdadeiro e o 0 como falso, ou vice-versa, não lembro direito, mas acho que é isso mesmo: o 1 é verdadeiro e o 0, falso. Ou seja, é um campo que dá um status por exemplo, do que ele significa.
+
+- Smallint, é um inteiro menor que tem as mesmas definições do Bigint e cujo os limites são um pouco menores do que o Bigint. Na verdade, são bem menores, praticamente quatro vezes menores.
+
+- Decimal é igual ao Numeric em sua definição. Tanto faz você definir o campo como decimal ou numeric, eles são a mesma coisa: números com casas decimais fixas.
+
+- Smallmoney. Normalmente um campo money representa valores financeiros, e além de ter casas decimais, esse valores financeiros são representados dentro do banco de dados com um prefixo, que é o símbolo da moeda que ele representa. Pode ser o símbolo do dólar, do real, do euro, e dependendo do idioma ou da propriedade específica do idioma em que o SQL Server está rodando, você já vai ter automaticamente esses símbolos.
+
+- Int, é o inteiro cujo o tamanho está entre o Bit e o Smallint. Ele vai de -2^31 a +2^31-1.
+
+- Tinyint, é um inteiro bem pequeno, eu o represento de 0 a 255.
+
+- Money, já é a representação de valores financeiros um pouco maior. Na verdade, muito maior, vai de -922.337.203.685.477. Então, o menor valor e o maior valor, é o mesmo menos um.
+
+- Float e o Real. Float é o número que tem um range de tamanho, muito maior, ou seja, a sua representação é muito maior. Enquanto o Real, é esse número com um limite um pouco menor.
+
+- Data e hora: Os campos do tipo data e hora, representam algum período do tempo. Então, nós temos o Data, que me dá o dia, mês e ano. Na verdade, normalmente eu represento no SQL Server ano, mês e dia.
+
+- DateTimeOffset, é o ano/mês/dia, com hora/minuto/segundo, porém, com a informação do fuso horário. Dependendo de como estou manipulando o meu dado, vou ter além da hora, qual é o deslocamento em relação ao ponto de Greenwich que aquele horário representa.
+
+- DateTime2: eu vejo a data, porém só com hora e minuto, o segundo sempre vai vir 00.
+
+- Smalldate, é a data com a hora apenas, não tem minutos e não tem segundos.
+
+- Datetime, nessa sim tenho a data, com a hora, minuto e segundo, porém, não tem a representação do fuso horário. Quem tem isso é o DateTimeOffset.
+
+- Time, eu só vejo a representação da hora.
+
+- Char, o Varchar e o Texto. Os três são cadeias de caracteres não unicode. Sendo que o Char tem o valor fixo de 1 a 8000. O Varchar, também.
+A diferença do Char e do Varchar, é a seguinte: o Varchar tem o tamanho variável, ou seja, se eu digo que o meu Varchar é tamanho 10, mas eu salvo no campo uma palavra com dois caracteres, ele só vai armazenar aqueles dois caracteres.
+Se o campo é um Char de 10, e eu gravo o mesmo campo com dois caracteres, ele vai ter que salvar dois caracteres e oito caracteres vazios, ou seja, ele vai ocupar os dez caracteres. Então, a diferença do Char para o Varchar, é que o Char é fixo, e o Varchar é variável.
+
+E o campo Texto, é uma cadeia de caracteres não unicode, mas que representa dados maiores do que o Varchar pode armazenar, ou dados binários. Bem, nChar, nVarchar e nTexto, têm as mesmas definições que o Char, o Varchar e Texto, porém, agora, são caracteres unicode.
+
+
+o que significa "unicode"? Unicode significa uma cadeia de caracteres que fornece num único conjunto de dados, todos os caracteres de todos os idiomas do mundo.
+
+- Binários, que representam dados de, por exemplo: eu tenho lá no meu diretório um arquivo-texto salvo. Eu posso pegar aquele arquivo-texto e salvar num campo do meu SQL Server. Ele será salvo como "binário".
+A mesma coisa vai acontecer com o VarBinário. A diferença, está no tamanho. O Binário armazena até 8.000 caracteres de tamanho, enquanto o VarBinário, chega até q 2^31-1 caracteres.
+
+
+
+
+
+
+
+
+
+

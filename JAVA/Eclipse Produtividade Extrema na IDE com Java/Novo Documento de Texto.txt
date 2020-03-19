@@ -1,0 +1,5 @@
+Java - Criação de novas classes, interfaces, enums
+Java EE - Criação e configuração de EJBs, WebServices, Servlets
+Java EE - Criação de projetos robustos, compostos de vários módulos
+JPA - Criação e configuração de entidades
+Web - Criação de arquivos JSP, CSS, HTML, Javascript

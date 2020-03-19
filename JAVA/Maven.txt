@@ -1,0 +1,15 @@
+Criando um projeto com o maven
+
+mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart
+
+mvn pmd:pmd (gera relatório do pmd)
+mvn pmd:check (gera relatório do pmd)
+
+
+
+Para gerar o relatório, você deve utilizar o comando mvn pmd:pmd. Caso existam violações no código-fonte, o arquivo pmd.html será criado em target/site, indicando quais são as violações.
+O goal pmd:check se relaciona à fase verify.
+
+
+
+
