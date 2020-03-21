@@ -1,0 +1,14 @@
+
+T-SQL
+
+Todo comando de select, insert, update, create, drop, tudo isso é TSQL. E ele vem do termo Transact SQL. Na verdade, desde o primeiro treinamento de SQL Server, nós já estamos praticando o TSQL. Agora, por que eu faço um curso visando especificamente falar sobre o TSQL? É porque o Transact SQL é muito mais do que simplesmente comandos de seleção, de inclusão, ou seja, comandos de manipulação de banco de dados.
+
+Controle de fluxo é um if. Se você já tem alguma noção de programação, você sabe. Se eu acho o comando if, eu testo uma condição e se essa condição for verdadeira, eu faço alguma coisa e eu tenho normalmente o comando else, que significa o seguinte: se ela não for verdadeira, eu faço uma outra coisa.
+
+
+Tabelas temporárias
+Temos três tipos de estruturas que podem ser consideradas tabelas temporárias. E elas vão se diferenciar pelo símbolo em que está na frente do nome dessa tabela.
+Se o nome da tabela tiver um # na frente, ela tem uma característica. Se tiver dois ##, tem uma segunda característica. E se tiver o @ na frente, tem uma terceira. Que características são essas? A tabela que começa com um #, significa que vale apenas para conexão vigente. Ou seja, quando a conexão vigente for fechada ou desligada, essa tabela some.
+Da mesma maneira que se eu for para uma outra conexão do SQL Server, ela não vai existir. A tabela com duas ##, é uma tabela que vale para todas as conexões vigentes. E ela só vai ser apagada quando eu der log off ou então o serviço do SQL Server for parado. Finalmente a tabela que começa com @ é uma tabela que vai ser declarada como se fosse uma variável.
+Então ela vai valer somente para aquele bloco de comandos que eu executar e usar essa tabela. Depois ela não vale mais. Vamos fazer alguns exemplos para entender como funcionam as tabelas temporárias com uma ou duas # e com @ na frente.
+A criação da tabela temporária é muito semelhante à criação de uma tabela normal, apenas a diferença é que algumas coisas as tabelas temporárias não podem ter, como, por exemplo, foreign keys.

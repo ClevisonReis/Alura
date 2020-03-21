@@ -5,3 +5,44 @@ Primeiro lugar, para eu fazer um JOIN, eu preciso ter uma chave única que esteja
 E, também, não é preciso ter uma chave estrangeira ligando esses dois comandos, desculpe, esses dois campos. Eu posso ligar dois campos de duas tabelas diferentes sem que haja uma chave estrangeira.
 
 Então, quando eu passo ON o campo da direita igual da esquerda, eu digo para o SELECT qual é o critério que vai juntar as duas tabelas. E como eu estou usando INNER JOIN, eu vou buscar todo mundo que é comum.
+
+
+--------LEFT/RIGHT JOIN
+se eu uso LEFT JOIN, o LEFT do inglês vem de esquerda, significa o seguinte, eu vou trazer todo mundo que está na tabela antes do comando LEFT JOIN, ou seja à esquerda do comando LEFT JOIN e somente os membros que existem na tabela que está à direita do LEFT JOIN.
+Então, por exemplo, aqui o comando, eu tenho "SELECT A.NOME, B.HOBBY FROM TABELA_ESQUEDA", que é essa, "LEFT JOIN TABELA_DIREITA", que é essa. Ou seja, eu vou trazer todo mundo da esquerda e somente os que têm ligação na tabela da direita.
+Ele vai fazer isso aqui, ele vai me apresentar como resultado, deixa eu tirar aqui, ele apresentar como resultado, no campo à direita que ele teria que trazer da tabela da direita, que ele não achou, ele vai trazer o campo NULL, ou seja, vazio, porque não achou ninguém lá na tabela da direita.
+Mas todo mundo da tabela direita veio. Então esse é o LEFT JOIN. Pois bem, é claro que eu tenho o RIGHT JOIN. O RIGHT JOIN inverte-se, eu vou pegar somente os que têm em comum na tabela da esquerda do meu comando join e todo mundo da tabela da direita do comando JOIN.
+Então eu tenho "SELECT A.NOME, B.HOBBY FROM TABELA_ESQUEDA", que tem a alias A, "RIGHT JOIN TABELA_DIREITA", que tem alias B e eu coloquei lá "ON A.IDENTIFICADOR = B.IDENTIFICADOR".
+
+------------FULL JOIN
+FULL JOIN. Pelo próprio nome em inglês, o FULL vem de cheio, todos. Eu faço o JOIN completo entre duas tabelas, ou seja, vai vir no resultado quem tem nas duas e quem somente tem na esquerda, ou quem somente tem na direita.
+
+Então, o comando é SELECT, eu boto lá os nomes dos campos, FROM a primeira tabela, FULL JOIN, a segunda tabela e o critério de junção. Se eu rodar esse comando como está mostrado aqui, ele vai mostrar esse resultado.
+
+Então o FULL JOIN é como se fosse um LEFT e um RIGHT ao mesmo tempo, juntando com o INNER. Então é um JOIN completo.
+
+------------CROSS JOIN
+o CROSS JOIN, ele faz uma análise combinatória entre todos os campos. Então, por exemplo, se eu fizer um CROSS JOIN entre essas duas tabelas, ele vai mostrar todos os hobbies para o João, todos os hobbies para a Maria, todos os hobbies Pedro e todos os hobbies para Cláudia. Vai fazer uma análise combinatória dos registros.
+
+E, como é uma análise combinatória, eu não preciso colocar o tipo de JOIN e nem o ON para dizer qual é o campo que junta com quem, porque, na verdade, eu não vou juntar ninguém com ninguém, eu vou fazer uma combinação de todo mundo.
+
+Então, a sintaxe fica com um pouco diferente, ela fica "SELECT", o nome dos campos. "FROM" primeira tabela, vírgula a segunda tabela. Então, vamos ver na prática isso lá na nossa base de "SUCOS_VENDAS" da empresa de suco de frutas.
+
+-------------UNION
+UNION, na verdade, não junta duas tabelas, mas junta duas consultas SELECT.
+Uma coisa importante, o UNION ele é obrigatoriamente, eu tenho que aplicá-lo obrigatoriamente em campos que são do mesmo tipo, ou seja, se na tabela de baixo o identificador fosse um string, ou fosse um outro tipo diferente da coluna identificador da primeira consulta, o UNION daria erro.
+Então, da mesma maneira que lá no JOIN eu disse que o JOIN só pode ser feito entre campos do mesmo tipo, o UNION também. Eu só posso fazer UNION em consultas cujas as colunas possuem a mesma ordem e os mesmos tipos. O nome das colunas pode ser outro, não tem nenhum problema, mas os tipos devem ser os mesmos.
+
+----------
+A subconsulta é como se eu pegasse uma consulta e usasse ela como se fosse uma tabela separada, uma consulta separada. Então, eu posso usar a subconsulta tanto dentro de um FROM como, por exemplo, dentro de um critério de busca.
+
+
+
+
+
+
+
+
+
+
+

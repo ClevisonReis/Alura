@@ -1,0 +1,7 @@
+Normalmente criamos a FK na tabela em que chega o relacionamento. Por exemplo, a FK entre matrícula na tabela vendedores e matrícula na tabela de notas, ela vai ser criada na tabela de notas. Posso também criar FK no meu create table.
+
+
+---------trigger
+No inglês, significa gatilho. A trigger é uma ação que será disparada no momento em que um dado numa tabela é atualizado, incluído ou excluído. O uso de trigger é uma ferramenta muito poderosa dos bancos de dados relacionais.
+
+A sintaxe é create trigger, o nome do trigger, normalmente colocamos a letra TG_ antes, on, nome da tabela em que vou verificar o que está acontecendo, é onde vou incluir ou excluir coisas. Depois tenho um parâmetro que digo quando a trigger vai ser executada. Posso colocar for, after ou instead of. O for significa que a ação será executada ao mesmo tempo da inclusão, alteração ou exclusão dos dados. O after após o término da ação. E o instead of vai substituir. Ao invés de executar a ação que disparou a trigger, ele vai executar a ação que programei na trigger. Claro que depois do parâmetro digo que tipo de ação irá disparar a trigger. Posso ter uma ação de insert, update ou delete, e posso usar mais de uma na mesma trigger, separando por vírgula. Depois coloco o comando as e o que chamo de corpo da trigger, que são os comandos que serão executados quando a trigger for disparada.
