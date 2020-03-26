@@ -12,3 +12,34 @@ Se o nome da tabela tiver um # na frente, ela tem uma característica. Se tiver d
 Da mesma maneira que se eu for para uma outra conexão do SQL Server, ela não vai existir. A tabela com duas ##, é uma tabela que vale para todas as conexões vigentes. E ela só vai ser apagada quando eu der log off ou então o serviço do SQL Server for parado. Finalmente a tabela que começa com @ é uma tabela que vai ser declarada como se fosse uma variável.
 Então ela vai valer somente para aquele bloco de comandos que eu executar e usar essa tabela. Depois ela não vale mais. Vamos fazer alguns exemplos para entender como funcionam as tabelas temporárias com uma ou duas # e com @ na frente.
 A criação da tabela temporária é muito semelhante à criação de uma tabela normal, apenas a diferença é que algumas coisas as tabelas temporárias não podem ter, como, por exemplo, foreign keys.
+
+--Funções
+Funções para o SQL são rotinas que efetuam um determinado processamento e retornam para você um valor escalar.
+O SQL possui uma vasta gama de funções que podem ser usadas não somente em select mas até mesmo dentro dos comandos de TSQL, em inserts, em estruturas dentro de while e de ifs, como fizemos em alguns exemplos já neste treinamento.Então quando eu falo um valor escalar, estou querendo dizer que pode retornar um string, número ou então uma data.
+As funções do SQL são aquelas: string, data, números ou de conversão de dados. Eu posso criar uma função SQL minha, usando a minha lógica e a minha programação e usá-la da mesma maneira que utilizo nas funções já pré-definidas pelo SQL.
+
+
+----------Stored Procedure
+São rotinas que são executadas no servidor do SQL Server. Essas rotinas possuem grande poder de performance. Geralmente elas são usadas para grandes manipulações de dados dentro do banco de dados. As stored procedures também podem ser do tipo UDF, ou seja, podem ser definidas pelo usuário.
+
+Eu posso definir as minhas próprias stored procedures usando comandos de TSQL. Mas existem também stored procedures de sistemas, que já estão previamente disponíveis dentro do servidor do SQL Server. Afinal, qual é a diferença entre stored procedure e função? A função sempre vai retornar um valor, seja ele escalar ou tabela. E normalmente eu tenho uma variável que vai receber como valor o resultado da função.
+
+Eu posso passar a variável para a stored procedure de duas maneiras: como valor ou como referência. Quando eu passo a variável para a stored procedure como valor, o que acontece com essa variável? Dentro da stored procedure, o programa que a chamou não consegue visualizar. Porém, se eu passar a variável como referência, o que acontecer com essa variável dentro da stored procedure é retornado para mim. E eu posso passar mais de uma variável como valor e mais de uma variável como referência.
+
+
+
+--------
+Quando eu executo uma stored procedure erros podem acontecer. Eu não estou falando de erros de lógica, mas erros por exemplo, de sistema.
+
+E eu posso tratar esses erros, ou seja, quando acontece um erro eu posso colocar uma mensagem mais intuitiva para o usuário ou coisas desse tipo. Eu posso fazer o tratamento de erros de duas maneiras, usando uma estrutura chamada try catch ou não usando essa estrutura. A estrutura try catch aparece em várias linguagens de programação.
+
+Basicamente são dois blocos de código onde no primeiro bloco eu tento fazer alguma coisa e se houver algum erro de sistema, em vez de eu ter aquela mensagem de erro feia que acontece quando o programa está sendo executado, ele encontra o que nós chamamos de uma exceção e ele desvia o código para o segundo bloco de comando e ali eu posso tratar o erro. Eu posso substituir aquela mensagem do sistema operacional, aquela mensagem interna do SQL Server para uma mensagem mais amigável.
+
+
+-------- Cursor
+ A estrutura de cursor é muito usada no TSQL e não somente no TSQL mas em todos os bancos relacionais que trabalham com programação. A estrutura de cursor é muito útil. Basicamente ela trata de como nós gravamos em memória a situação de uma tabela. E eu pudesse dentro de um while percorrer passo a passo, linha a linha daquela seleção que eu fiz e mexer com isso e tratar isso para criar outras coisas, fazer cálculos etc.
+As fases do uso do cursor consistem no seguinte: primeiro a declaração onde eu crio o cursor e defino associado ao cursor uma consulta SQL que pode ser em cima de uma tabela física, uma tabela de memória ou em cima de um tipo table etc. Um select que vai trazer um conjunto de dados. Esse conjunto de dados possui linhas e colunas. Depois que eu faço, declaro o cursor passando para ele o comando SQL que vai popular esse cursor, eu abro o cursor.
+As fases do uso do cursor consistem no seguinte: primeiro a declaração onde eu crio o cursor e defino associado ao cursor uma consulta SQL que pode ser em cima de uma tabela física, uma tabela de memória ou em cima de um tipo table etc. Um select que vai trazer um conjunto de dados. Esse conjunto de dados possui linhas e colunas. Depois que eu faço, declaro o cursor passando para ele o comando SQL que vai popular esse cursor, eu abro o cursor.
+Ao abrir o cursor eu estou pronto para manipulá-lo. Depois eu vou posicionar como se fosse o meu contador virtual para a primeira linha do cursor. É a terceira fase do uso do cursor. E eu posso ir percorrendo linha a linha, ou seja, vai para a linha de baixo, vai para a próxima linha. Eu posso ir percorrendo linha a linha do cursor e verificando o que está acontecendo em cada ponto de cada linha que eu estou dentro do cursor.
+E eu posso chegar até o final da consulta linha a linha. Quando eu não quero mais usar o cursor eu o fecho. Então ele fica fechado e depois um comando importante é limpar o cursor da memória. Então tenho mais ou menos exemplificando as seis fases do uso do cursor. Vamos entender graficamente como funciona.
+
