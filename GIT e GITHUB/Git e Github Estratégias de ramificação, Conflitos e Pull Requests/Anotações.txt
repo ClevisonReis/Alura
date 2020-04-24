@@ -1,0 +1,73 @@
+Execute git log --graph e confira que, embora haja várias linhas de desenvolvimento, tudo começa e termina na linha da branch master;
+
+Execute o comando git branch -d titulo para remover a branch titulo;
+
+Execute o comando git branch -D novo-release para remover a branch novo-release, mesmo que ela tenha commits à frente do master;
+
+Execute o comando git branch development para criar um nova branch de desenvolvimento chamado development;
+
+Execute o comando git checkout development para passar a trabalhar na branch development;
+
+Execute o comando git checkout -b feature/lista-cursos-cloud para criar um nova branch, chamada feature/lista-cursos-cloud;
+
+Execute git add index.html e git commit -m "Cursos de EC2 e S3 adicionados" para commitar esta alteração;
+
+Execute git add index.html e git commit -m "Cursos de Beanstalk e ECS adicionados" para commitar esta alteração;
+
+Execute git checkout development para voltar para a branch de desenvolvimento;
+
+Execute git checkout -b feature/lista-cursos-linux para passar a trabalhar em um nova branch, chamada feature/lista-cursos-linux;
+
+Execute git add index.html e git commit -m "Cursos de Linux I e II adicionados" para commitar esta alteração;
+
+Execute git checkout development para voltar para a branch de desenvolvimento;
+
+Execute o comando git branch para conferir quantas e quais branches você têm criadas atualmente;
+
+Execute o comando git merge feature/lista-cursos-linux para trazer os cursos de Linux para a branch de desenvolvimento;
+
+Execute o comando git checkout feature/lista-cursos-cloud para voltar à branch feature/lista-cursos-cloud;
+
+Execute git add index.html e git commit -m "Curso de Google Cloud adicionado" para commitar esta alteração;
+
+Execute git checkout development para voltar para a branch de desenvolvimento;
+
+Execute o comando git merge feature/lista-cursos-cloud para trazer os cursos de Cloud para a branch de desenvolvimento;
+
+Resolva o conflito mantendo as duas listas novas de cursos;
+
+Execute git add index.html e git commit para continuar o processo de merge;
+
+Volte para a branch master com o comando git checkout master;
+
+Trabalhe em um nova branch, chamada hotfix/v0.1.1, utilizando o comando git checkout -b hotfix/v0.1.1;
+
+Altere o título da página (na tag <title>) para "Lista de cursos";
+
+Execute git add index.html e git commit -m "Removendo o nome da Alura do título" para commitar esta alteração;
+
+Volte para a branch master, com o comando git checkout master;
+
+Una o trabalho do hotfix, com o comando git merge hotfix/v0.1.1;
+
+Crie uma nova tag que representa uma nova versão, utilizando o comando git tag -a v0.1.1 -m "Versão com correção no título";
+
+Vá para a branch de desenvolvimento com git checkout development;
+
+Traga a correção do bug com git merge hotfix/v0.1.1;
+
+Crie um nova branch, chamada de release/v0.2.0, com o comando git checkout -b release/v0.2.0;
+
+Execute git add index.html e git commit -m "Corrigindo bug: Cursos de Shell faltantes" para commitar esta alteração;
+
+Volte para a branch master, com o comando git checkout master;
+
+Una todo o trabalho referente à nova release, com git merge release/v0.2.0;
+
+Crie uma nova tag que representa uma nova versão, utilizando o comando git tag -a v0.2.0 -m "Novas listas adicionadas";
+
+Execute o comando git branch e confira todos as branches criadas neste processo;
+
+
+
+

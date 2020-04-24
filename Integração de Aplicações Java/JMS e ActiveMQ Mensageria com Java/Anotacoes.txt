@@ -1,0 +1,15 @@
+ActiveMQ - Mensageria (Gerenciador de filas do apache)
+Middleware
+
+Apache ActiveMQ
+
+http://localhost:8161/index.html
+http://0.0.0.0:8161/
+http://0.0.0.0:8161/api/jolokia/
+
+
+-----------
+start
+
+C:\apache-activemq-5.15.12\bin\win64
+activemq.bat
